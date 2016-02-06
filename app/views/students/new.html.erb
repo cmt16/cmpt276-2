@@ -1,0 +1,9 @@
+<strong>Give information about a student in the classroom:</strong>
+<hr>
+<%= form_for @student do |f| -%>
+    Name: <%= f.text_field :name %><br />
+    Color: <%= f.text_field :color %><br />
+    Weight: <%= f.text_field :weight %><br />
+    Height: <%= f.text_field :height %><br />
+    <%= f.submit%>
+<% end -%>

@@ -1,0 +1,40 @@
+<html>
+    
+    <head>
+        <title>Grand Display of Students</title>
+    </head>
+
+    <body>
+    <h1>List of Students:</h1>
+    
+    <div id="data">
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Color</th>
+        <th>Weight</th>
+        <th>Height</th>
+        <th>Edit</th>
+        <th>Remove</th>
+      </tr>
+    <% @students.each do |student| %>
+      <tr>
+        <td><%= student.name %></td>
+        <td><%= student.color %></td>
+        <td><%= student.weight %></td>
+        <td><%= student.height %></td>
+        <td><u><%= link_to 'Edit', :action => 'edit', :controller => 'students' %></u></td>
+        <td><u><%= link_to 'Remove', :action => 'delete', :controller => 'students' %></u></td>
+      </tr>
+    <% end %>
+        <th><b><%= link_to 'View People', :action => 'viewpeople', :controller => 'students' %></b></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th><b><u><%= link_to 'New Entry', :action => 'new', :controller => 'students' %></u></b></th>
+        <th><b><u>REMOVE ALL</u></b></th>
+    </table>
+    </div>
+    
+    </body>
+</html>

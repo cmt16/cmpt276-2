@@ -1,0 +1,16 @@
+<html>
+    
+    <head>
+        <title>Displaying People</title>
+    </head>
+    
+    <body>
+    <div>
+    <% @students.each do |student| %>
+        <p>Name: <%= student.name %></p>
+        <div style="background-color: <%= student.color %>; width:<%= student.weight %>px; height:<%= student.height %>px; border:1px solid #000000; "></div>
+    <% end %>
+    </div>
+    </body>
+    
+</html>
